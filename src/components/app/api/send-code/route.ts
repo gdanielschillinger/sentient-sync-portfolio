@@ -1,11 +1,46 @@
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
+import sqlite3 from 'sqlite3';
+import { open } from 'sqlite';
+import path from 'path';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
+const FORBIDDEN_DOMAINS = ['guerrillamail.com', '10minutemail.com', 'temp-mail.org'];
 
 export async function POST(req: Request) {
+  const dbPath = path.resolve(process.cwd(), 'sentient_sync.db');
+  let db = null;
+
   try {
     const { email } = await req.json();
+    const domain = email.split('@')[1];
+    
+    const ip = req.headers.get('x-forwarded-for') || 'unknown';
+    const userAgent = req.headers.get('user-agent') || 'unknown';
+
+    db = await open({
+      filename: dbPath,
+      driver: sqlite3.Database,
+    });
+
+    await db.exec(`
+      CREATE TABLE IF NOT EXISTS login_attempts (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+        email TEXT,
+        ip_address TEXT,
+        user_agent TEXT
+      )
+    `);
+
+    await db.run(
+      'INSERT INTO login_attempts (email, ip_address, user_agent) VALUES (?, ?, ?)',
+      [email, ip, userAgent]
+    );
+
+    if (FORBIDDEN_DOMAINS.includes(domain)) {
+      return NextResponse.json({ error: "RESTRICTED_DOMAIN_ACCESS_DENIED" }, { status: 403 });
+    }
     
     // 1. Generate a 6-digit industrial code
     const otpCode = Math.floor(100000 + Math.random() * 900000).toString();
@@ -39,5 +74,9 @@ export async function POST(req: Request) {
 
   } catch (err) {
     return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
+  } finally {
+    if (db) {
+      await db.close();
+    }
   }
 }

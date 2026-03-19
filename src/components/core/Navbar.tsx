@@ -43,7 +43,7 @@ export default function Navbar() {
         </a>
 
         <div className="flex items-center gap-8">
-          {["Architecture", "Modules", "Roadmap"].map((item) => (
+          {["Architecture", "Modules", "Threats", "Roadmap"].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}

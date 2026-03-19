@@ -33,14 +33,14 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 w-full z-50 border-b border-zinc-900 bg-black/80 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <div className="flex items-center gap-4">
-          <div className="w-8 h-8 bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center rounded-sm">
+        <a href="/" aria-label="Return to top" className="flex items-center gap-4 group">
+          <div className="w-8 h-8 bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center rounded-sm group-hover:border-cyan-500/50 transition-colors">
             <span className="text-cyan-500 font-mono text-xs font-bold">S</span>
           </div>
-          <span className="text-[10px] font-mono tracking-[0.4em] text-zinc-400 uppercase hidden sm:block">
+          <span className="text-[10px] font-mono tracking-[0.4em] text-zinc-400 uppercase hidden sm:block group-hover:text-zinc-200 transition-colors">
             Sentient // Sync
           </span>
-        </div>
+        </a>
 
         <div className="flex items-center gap-8">
           {["Architecture", "Modules", "Roadmap"].map((item) => (

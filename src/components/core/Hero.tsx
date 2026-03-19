@@ -1,17 +1,17 @@
 "use client";
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen w-full bg-[#050505] flex flex-col items-center justify-center overflow-hidden py-32">
       <div
         className="absolute inset-0 opacity-10"
-        style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, #22d3ee 1px, transparent 0)', backgroundSize: '40px 40px' }}
+        style={{ backgroundImage: "radial-gradient(circle at 1px 1px, #22d3ee 1px, transparent 0)", backgroundSize: "40px 40px" }}
       />
 
       <div className="container mx-auto px-6 z-10 text-center">
-        {/* Status badge — no opacity-0 start so it's visible immediately */}
+        {/* Status badge */}
         <div className="flex items-center gap-2 mb-4 justify-center">
           <span className="relative flex h-2 w-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
@@ -20,11 +20,12 @@ export default function Hero() {
           <span className="text-[10px] font-mono text-cyan-500/80 uppercase tracking-[0.3em]">System Status: Operational // Node-Alpha-01</span>
         </div>
 
-        <div className="inline-block px-4 py-1.5 mb-6 border border-cyan-500/30 bg-cyan-500/10 rounded-full">
+        {/* Protocol badge — decorative, styled as non-interactive */}
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 border border-cyan-500/30 bg-cyan-500/10 rounded-full">
+          <span className="w-1 h-1 rounded-full bg-cyan-400 animate-pulse" />
           <span className="text-xs font-mono tracking-widest text-cyan-400 uppercase">Protocol: AGI-Sync-Secure</span>
         </div>
 
-        {/* Hero title — visible immediately, animates in from below */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -43,12 +44,11 @@ export default function Hero() {
           Bridging autonomous AGI architecture with zero-trust cryptographic protocols. Custom-engineered for secure machine intelligence.
         </motion.p>
 
-        {/* Fixed CTAs — wired to real targets */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center mb-24"
+          className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
         >
           <a
             href="https://github.com/gdanielschillinger/sentient-sync-portfolio#readme"
@@ -67,6 +67,29 @@ export default function Hero() {
             GitHub Repository
           </a>
         </motion.div>
+
+        {/* Scroll-down indicator */}
+        <motion.a
+          href="#architecture"
+          aria-label="Scroll to Architecture"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.9 }}
+          className="inline-flex flex-col items-center gap-1 mb-16 group"
+        >
+          <span className="text-[9px] font-mono uppercase tracking-[0.3em] text-zinc-700 group-hover:text-zinc-500 transition-colors">Scroll</span>
+          <motion.svg
+            animate={{ y: [0, 4, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+            width="12"
+            height="8"
+            viewBox="0 0 12 8"
+            fill="none"
+            className="text-zinc-700 group-hover:text-cyan-500 transition-colors"
+          >
+            <path d="M1 1L6 6L11 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          </motion.svg>
+        </motion.a>
 
         {/* Strategic Positioning Copy */}
         <motion.div

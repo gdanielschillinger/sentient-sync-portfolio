@@ -76,9 +76,24 @@ export default function BentoGrid() {
     <section id="modules" className="bg-black py-32 px-6">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-[10px] uppercase tracking-[0.4em] text-zinc-500 mb-12">Core Modules // v1.0</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 auto-rows-auto">
-          {MODULE_DATA.map((module) => (
-            <div key={module.id} className="col-span-1 row-span-1">
+
+        {/*
+          Layout: true 3x2 Bento
+          Row 1: [Module 01] [Module 02] [Module 03]
+          Row 2: [Module 04] [Module 05] [TerminalLog — spans col 3, rows 1-2]
+
+          We use explicit grid areas to lock the TerminalLog into col-3 spanning both rows.
+        */}
+        <div
+          className="grid gap-3"
+          style={{
+            gridTemplateColumns: 'repeat(3, 1fr)',
+            gridTemplateRows: 'auto auto',
+          }}
+        >
+          {/* Row 1 — modules 01–03 */}
+          {MODULE_DATA.slice(0, 3).map((module) => (
+            <div key={module.id} style={{ gridColumn: 'span 1', gridRow: 'span 1' }}>
               <ModuleCard
                 id={module.id}
                 title={module.title}
@@ -87,7 +102,35 @@ export default function BentoGrid() {
               />
             </div>
           ))}
-          <div className="md:col-span-2 md:row-span-2 col-span-1">
+
+          {/* Row 2 col 1 — module 04 */}
+          <div style={{ gridColumn: 'span 1', gridRow: 'span 1' }}>
+            <ModuleCard
+              id={MODULE_DATA[3].id}
+              title={MODULE_DATA[3].title}
+              description={MODULE_DATA[3].description}
+              logs={MODULE_DATA[3].logs}
+            />
+          </div>
+
+          {/* Row 2 col 2 — module 05 */}
+          <div style={{ gridColumn: 'span 1', gridRow: 'span 1' }}>
+            <ModuleCard
+              id={MODULE_DATA[4].id}
+              title={MODULE_DATA[4].title}
+              description={MODULE_DATA[4].description}
+              logs={MODULE_DATA[4].logs}
+            />
+          </div>
+
+          {/* Terminal — col 3, spans rows 1 and 2 */}
+          <div
+            style={{
+              gridColumn: '3 / 4',
+              gridRow: '1 / 3',
+            }}
+            className="min-h-[300px]"
+          >
             <div className="h-full w-full rounded-2xl overflow-hidden">
               <TerminalLog />
             </div>

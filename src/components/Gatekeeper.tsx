@@ -24,7 +24,7 @@ const SentientSyncCore = () => {
     });
   }, []);
 
-  const [logs, setLogs] = useState([]);
+  const [logs, setLogs] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   // Fetching the live audit pulses from your SQLite database

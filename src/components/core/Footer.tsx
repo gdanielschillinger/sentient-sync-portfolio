@@ -4,6 +4,9 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
         <div className="text-center md:text-left">
           <p className="font-mono text-[10px] text-zinc-600 uppercase tracking-[0.3em] mb-2">Built by Daniel Schillinger // Miami, FL</p>
+          <p className="text-[9px] font-mono text-zinc-800 uppercase tracking-widest mt-1">
+            NYC&nbsp;·&nbsp;America/New_York&nbsp;&nbsp;//&nbsp;&nbsp;FRA&nbsp;·&nbsp;Europe/Berlin
+          </p>
           <p className="text-[9px] font-mono text-zinc-800 uppercase">© 2026 Sentient Sync // Secured Terminal</p>
         </div>
         <div className="flex gap-8">

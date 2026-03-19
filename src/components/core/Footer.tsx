@@ -24,10 +24,10 @@ export default function Footer() {
             GitHub
           </a>
           <a
-            href="mailto:gerddaniel.schilling@mymail.champlain.edu"
+            href="mailto:daniel@gdanielschillinger.com"
             className="text-[10px] font-mono text-zinc-500 hover:text-cyan-400 transition-colors uppercase tracking-widest"
           >
-            Email
+            daniel@gdanielschillinger.com
           </a>
         </div>
       </div>

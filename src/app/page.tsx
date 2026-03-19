@@ -1,17 +1,19 @@
-import Hero from '@/components/Hero'
-import BentoGrid from '@/components/BentoGrid'
+import Navbar from '@/components/core/Navbar';
+import Hero from '@/components/core/Hero';
+import Architecture from '@/components/core/Architecture';
+import BentoGrid from '@/components/core/BentoGrid';
+import Roadmap from '@/components/core/Roadmap';
+import Footer from '@/components/core/Footer';
 
 export default function Home() {
   return (
-    // The bg-[#050505] ensures the Obsidian black theme is seamless
     <main className="min-h-screen bg-[#050505]">
-      {/* This is the Section 1: The "Wow" Visual */}
+      <Navbar />
       <Hero />
-      
-      {/* This is Section 2: Your Technical Dashboard */}
+      <Architecture />
       <BentoGrid />
-      
-      {/* Footer / Contact Section can go here later */}
+      <Roadmap />
+      <Footer />
     </main>
   );
 }

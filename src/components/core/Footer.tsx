@@ -7,9 +7,28 @@ export default function Footer() {
           <p className="text-[9px] font-mono text-zinc-800 uppercase">© 2026 Sentient Sync // Secured Terminal</p>
         </div>
         <div className="flex gap-8">
-          {['LinkedIn', 'GitHub', 'Email'].map((link) => (
-            <a key={link} href="#" className="text-[10px] font-mono text-zinc-500 hover:text-cyan-400 transition-colors uppercase tracking-widest">{link}</a>
-          ))}
+          <a
+            href="https://www.linkedin.com/in/gdanielschillinger"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[10px] font-mono text-zinc-500 hover:text-cyan-400 transition-colors uppercase tracking-widest"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="https://github.com/gdanielschillinger"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[10px] font-mono text-zinc-500 hover:text-cyan-400 transition-colors uppercase tracking-widest"
+          >
+            GitHub
+          </a>
+          <a
+            href="mailto:gerddaniel.schilling@mymail.champlain.edu"
+            className="text-[10px] font-mono text-zinc-500 hover:text-cyan-400 transition-colors uppercase tracking-widest"
+          >
+            Email
+          </a>
         </div>
       </div>
     </footer>

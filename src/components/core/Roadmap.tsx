@@ -1,16 +1,16 @@
 "use client";
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const phases = [
   { date: "FEB 2026", task: "Development: Sentient Sync Core", detail: "Finalizing auditor.py with cryptographic signing." },
   { date: "MAR 2026", task: "Academic Finalization", detail: "Completion of BS Cybersecurity (Champlain College)." },
-  { date: "APR 2026", task: "eMerge Americas Launch", detail: "Official deployment of AGI/Cybersecurity portfolio." }
+  { date: "APR 2026", task: "eMerge Americas Launch", detail: "Official deployment of AGI/Cybersecurity portfolio." },
 ];
 
 export default function Roadmap() {
   return (
-    <section id="roadmap" className="bg-black py-32 px-6 border-t border-zinc-900/50">
+    <section id="roadmap" className="bg-black py-24 px-6 border-t border-zinc-900/50">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-[10px] font-mono uppercase tracking-[0.5em] text-zinc-500 mb-16 text-center">Strategic Roadmap</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

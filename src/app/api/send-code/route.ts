@@ -1,10 +1,12 @@
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
 const FORBIDDEN_DOMAINS = ['guerrillamail.com', '10minutemail.com', 'temp-mail.org'];
 
 export async function POST(req: Request) {
+  // Lazy init — only instantiate at request time, not module load
+  const resend = new Resend(process.env.RESEND_API_KEY ?? '');
+
   try {
     const { email } = await req.json();
 

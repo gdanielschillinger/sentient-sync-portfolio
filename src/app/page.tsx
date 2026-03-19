@@ -3,6 +3,7 @@ import Hero from '@/components/core/Hero';
 import Architecture from '@/components/core/Architecture';
 import BentoGrid from '@/components/core/BentoGrid';
 import ThreatFeed from '@/components/core/ThreatFeed';
+import SystemDocs from '@/components/core/SystemDocs';
 import Roadmap from '@/components/core/Roadmap';
 import Footer from '@/components/core/Footer';
 
@@ -14,6 +15,7 @@ export default function Home() {
       <Architecture />
       <BentoGrid />
       <ThreatFeed />
+      <SystemDocs />
       <Roadmap />
       <Footer />
     </main>

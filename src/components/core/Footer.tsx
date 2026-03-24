@@ -11,7 +11,7 @@ export default function Footer() {
         </div>
         <div className="flex gap-8">
           <a
-            href="https://www.linkedin.com/in/gdanielschillinger"
+            href="https://www.linkedin.com/in/daniel-schillinger-97a7423b4"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[10px] font-mono text-zinc-500 hover:text-cyan-400 transition-colors uppercase tracking-widest"
@@ -27,10 +27,10 @@ export default function Footer() {
             GitHub
           </a>
           <a
-            href="mailto:daniel@gdanielschillinger.com"
+            href="mailto:gdaniel.schillinger@gmail.com"
             className="text-[10px] font-mono text-zinc-500 hover:text-cyan-400 transition-colors uppercase tracking-widest"
           >
-            daniel@gdanielschillinger.com
+            gdaniel.schillinger@gmail.com
           </a>
         </div>
       </div>

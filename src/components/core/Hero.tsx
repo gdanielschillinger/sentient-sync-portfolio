@@ -99,11 +99,11 @@ export default function Hero() {
           transition={{ duration: 0.6 }}
           className="max-w-3xl mx-auto text-left border-t border-zinc-900 pt-16"
         >
-          <h2 className="text-[10px] font-mono uppercase tracking-[0.4em] text-zinc-500 mb-8">Identity // Lead Systems Architect</h2>
+          <h2 className="text-[10px] font-mono uppercase tracking-[0.4em] text-zinc-500 mb-8">G. Daniel Schillinger // AGI Cybersecurity Architect</h2>
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
             <div className="md:col-span-8">
               <p className="text-zinc-300 text-lg leading-relaxed mb-6">Cybersecurity-focused systems builder with enterprise-scale experience and a disciplined approach to AI architecture.</p>
-              <p className="text-zinc-500 text-sm leading-relaxed mb-8">Daniel designs secure automation frameworks prioritizing traceability and deterministic execution. His work bridges security engineering with forward-looking AGI orchestration.</p>
+              <p className="text-zinc-500 text-sm leading-relaxed mb-8">G. Daniel Schillinger designs secure automation frameworks prioritizing traceability and deterministic execution. His work bridges security engineering with forward-looking AGI orchestration — 4 years at Visa Inc., BS Cybersecurity (4.0 GPA, Champlain College), and the architect behind the Sentient Sync Engine.</p>
             </div>
             <div className="md:col-span-4 flex flex-col gap-4">
               <h3 className="text-[10px] font-mono uppercase tracking-widest text-cyan-500/80">Core Focus</h3>

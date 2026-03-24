@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const layers = [
   { id: "LOG-01", title: "Secure Ingestion Layer", desc: "Deterministic log parsing and regex-based anomaly detection engine." },
-  { id: "CORE-02", title: "Agent Orchestration", desc: "LangGraph logic gates utilizing collision detection for secure task delegation." },
+  { id: "CORE-02", title: "Agent Orchestration", desc: "LangGraph logic gates utilizing collusion detection for secure task delegation." },
   { id: "AUDIT-03", title: "Cryptographic Signing", desc: "Implementation of auditor.py for immutable action-trail validation.", highlight: true },
   { id: "GOV-04", title: "NIST-Aligned Governance", desc: "Persistence layer ensuring traceability and zero-trust protocol enforcement." }
 ];

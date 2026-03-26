@@ -13,13 +13,45 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sentient Sync Engine — Daniel Schillinger",
-  description: "AGI Cybersecurity Architecture & Security Automation. Built by G. Daniel Schillinger — Lead Systems Architect.",
+  title: "G. Daniel Schillinger — AGI Cybersecurity Architect",
+  description:
+    "I built Visa's first in-house LLM from scratch. 37%→90% accuracy in 30 days. Now architecting the Sentient Sync Engine — AGI collusion detection aligned to OWASP LLM Top 10, NIST CSF, and IEEE. Featured at eMerge Americas, April 23, 2026.",
+  keywords: [
+    "AGI Security",
+    "AI Security Engineer",
+    "Cybersecurity Architect",
+    "LLM Security",
+    "OWASP LLM Top 10",
+    "NIST CSF",
+    "Agent Collusion Detection",
+    "LangGraph",
+    "Zero Trust",
+    "GenAI Ambassador",
+    "Sentient Sync Engine",
+    "G. Daniel Schillinger",
+  ],
+  authors: [{ name: "G. Daniel Schillinger", url: "https://gdanielschillinger.com" }],
+  creator: "G. Daniel Schillinger",
+  metadataBase: new URL("https://gdanielschillinger.com"),
   openGraph: {
-    title: "Sentient Sync Engine",
-    description: "Bridging autonomous AGI architecture with zero-trust cryptographic protocols.",
+    type: "website",
     url: "https://gdanielschillinger.com",
-    siteName: "Sentient Sync Engine",
+    siteName: "G. Daniel Schillinger — AGI Cybersecurity Architect",
+    title: "G. Daniel Schillinger — AGI Cybersecurity Architect",
+    description:
+      "Built Visa's first in-house LLM. 37%→90% accuracy in 30 days. Now building the Sentient Sync Engine — real-time AGI collusion detection. BS Cybersecurity (4.0 GPA). Featured at eMerge Americas, April 23, 2026.",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "G. Daniel Schillinger — AGI Cybersecurity Architect",
+    description:
+      "Built Visa's first in-house LLM. 37%→90% accuracy in 30 days. Now building the Sentient Sync Engine — real-time AGI collusion detection. Featured at eMerge Americas, April 23, 2026.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large" },
   },
 };
 

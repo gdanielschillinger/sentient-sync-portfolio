@@ -97,24 +97,23 @@ export default function Contact() {
 
               {/* Resume Download */}
               <a
-                href="https://github.com/gdanielschillinger/sentient-sync-portfolio#readme"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/GDanielSchillinger_Resume.pdf"
+                download="GDanielSchillinger_Resume.pdf"
                 className="group flex items-center justify-between p-5 border border-cyan-500/20 bg-cyan-500/[0.03] hover:border-cyan-500/50 hover:bg-cyan-500/[0.07] transition-all rounded-sm"
               >
                 <div className="flex items-center gap-4">
                   <div className="w-8 h-8 flex items-center justify-center border border-cyan-500/30 group-hover:border-cyan-500/60 rounded-sm transition-colors">
                     <svg viewBox="0 0 24 24" fill="none" className="w-4 h-4 text-cyan-500 group-hover:text-cyan-300 transition-colors">
-                      <path d="M12 16l-4-4h3V4h2v8h3l-4 4zM4 20h16v2H4v-2z" fill="currentColor"/>
+                      <path d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 004.561 21h14.878a2 2 0 001.94-1.515L22 17" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </div>
                   <div>
-                    <p className="text-xs font-mono text-cyan-400 group-hover:text-cyan-300 transition-colors uppercase tracking-widest">Resume / Portfolio Docs</p>
-                    <p className="text-[10px] font-mono text-zinc-600">Technical documentation + project writeup</p>
+                    <p className="text-xs font-mono text-cyan-400 group-hover:text-cyan-300 transition-colors uppercase tracking-widest">Download Resume</p>
+                    <p className="text-[10px] font-mono text-zinc-600">GDanielSchillinger_Resume.pdf · One click</p>
                   </div>
                 </div>
                 <svg viewBox="0 0 24 24" fill="none" className="w-4 h-4 text-cyan-700 group-hover:text-cyan-400 transition-colors">
-                  <path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 004.561 21h14.878a2 2 0 001.94-1.515L22 17" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </a>
 

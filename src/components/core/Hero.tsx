@@ -1,8 +1,29 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+
+function useCountdown(targetDate: Date) {
+  const calc = () => {
+    const diff = targetDate.getTime() - Date.now();
+    if (diff <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+    return {
+      days:    Math.floor(diff / (1000 * 60 * 60 * 24)),
+      hours:   Math.floor((diff / (1000 * 60 * 60)) % 24),
+      minutes: Math.floor((diff / (1000 * 60)) % 60),
+      seconds: Math.floor((diff / 1000) % 60),
+    };
+  };
+  const [t, setT] = useState(calc);
+  useEffect(() => {
+    const id = setInterval(() => setT(calc()), 1000);
+    return () => clearInterval(id);
+  }, []);
+  return t;
+}
 
 export default function Hero() {
+  const emerge = useCountdown(new Date("2026-04-23T09:00:00-04:00"));
   return (
     <section className="relative min-h-screen w-full bg-[#050505] flex flex-col items-center justify-center overflow-hidden py-32">
       <div
@@ -21,10 +42,36 @@ export default function Hero() {
         </div>
 
         {/* Protocol badge — decorative, styled as non-interactive */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 border border-cyan-500/30 bg-cyan-500/10 rounded-full">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-4 border border-cyan-500/30 bg-cyan-500/10 rounded-full">
           <span className="w-1 h-1 rounded-full bg-cyan-400 animate-pulse" />
           <span className="text-xs font-mono tracking-widest text-cyan-400 uppercase">Protocol: AGI-Sync-Secure</span>
         </div>
+
+        {/* eMerge Americas countdown badge */}
+        <motion.div
+          initial={{ opacity: 0, y: -6 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.15 }}
+          className="flex items-center justify-center gap-3 mb-6"
+        >
+          <div className="inline-flex items-center gap-3 px-5 py-2 border border-amber-500/40 bg-amber-500/[0.06] rounded-full">
+            <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
+            <span className="text-[10px] font-mono text-amber-400/90 uppercase tracking-[0.25em]">eMerge Americas</span>
+            <span className="h-3 w-[1px] bg-amber-500/30" />
+            <div className="flex items-baseline gap-1 font-mono text-[10px] tabular-nums">
+              <span className="text-white font-bold">{String(emerge.days).padStart(2,"0")}</span>
+              <span className="text-amber-500/60">d</span>
+              <span className="text-white font-bold ml-1">{String(emerge.hours).padStart(2,"0")}</span>
+              <span className="text-amber-500/60">h</span>
+              <span className="text-white font-bold ml-1">{String(emerge.minutes).padStart(2,"0")}</span>
+              <span className="text-amber-500/60">m</span>
+              <span className="text-white font-bold ml-1">{String(emerge.seconds).padStart(2,"0")}</span>
+              <span className="text-amber-500/60">s</span>
+            </div>
+            <span className="h-3 w-[1px] bg-amber-500/30" />
+            <span className="text-[10px] font-mono text-amber-500/60 uppercase tracking-widest">Apr 23 · Miami</span>
+          </div>
+        </motion.div>
 
         {/* Name + credentials lockup */}
         <motion.div

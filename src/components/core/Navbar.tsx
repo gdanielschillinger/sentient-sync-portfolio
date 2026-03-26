@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useLang } from "@/lib/LanguageContext";
 
 function useDualClock() {
   const [times, setTimes] = useState({ nyc: "", fra: "" });
@@ -29,6 +30,16 @@ function useDualClock() {
 
 export default function Navbar() {
   const { nyc, fra } = useDualClock();
+  const { lang, setLang, t } = useLang();
+
+  const navItems = [
+    { key: "architecture", label: t.nav.architecture },
+    { key: "modules",      label: t.nav.modules },
+    { key: "threats",      label: t.nav.threats },
+    { key: "docs",         label: t.nav.docs },
+    { key: "demo",         label: t.nav.demo },
+    { key: "roadmap",      label: t.nav.roadmap },
+  ];
 
   return (
     <nav className="fixed top-0 w-full z-50 border-b border-zinc-900 bg-black/80 backdrop-blur-md">
@@ -42,23 +53,58 @@ export default function Navbar() {
           </span>
         </a>
 
-        <div className="flex items-center gap-8">
-          {["Architecture", "Modules", "Threats", "Docs", "Demo", "Roadmap"].map((item) => (
+        <div className="flex items-center gap-6">
+          {navItems.map((item) => (
             <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
+              key={item.key}
+              href={`#${item.key}`}
               className="text-[10px] font-mono uppercase tracking-widest text-zinc-500 hover:text-cyan-400 transition-colors hidden lg:block"
             >
-              {item}
+              {item.label}
             </a>
           ))}
+
+          {/* Hire Me CTA */}
           <a
             href="#contact"
             className="text-[10px] font-mono uppercase tracking-widest text-cyan-400 border border-cyan-500/30 px-3 py-1 rounded-sm hover:bg-cyan-500/10 hover:border-cyan-500/60 transition-all"
           >
-            Hire Me
+            {t.nav.hireMe}
           </a>
+
           <div className="h-4 w-[1px] bg-zinc-800" />
+
+          {/* EN / DE Language Toggle */}
+          <div className="flex items-center gap-1 border border-zinc-800 rounded-sm overflow-hidden">
+            <button
+              onClick={() => setLang("en")}
+              aria-label="Switch to English"
+              className={`flex items-center gap-1.5 px-2.5 py-1 text-[10px] font-mono uppercase tracking-widest transition-all ${
+                lang === "en"
+                  ? "bg-zinc-800 text-white"
+                  : "text-zinc-600 hover:text-zinc-400"
+              }`}
+            >
+              <span className="text-xs leading-none">🇺🇸</span>
+              <span className="hidden sm:inline">EN</span>
+            </button>
+            <div className="h-4 w-[1px] bg-zinc-800" />
+            <button
+              onClick={() => setLang("de")}
+              aria-label="Zu Deutsch wechseln"
+              className={`flex items-center gap-1.5 px-2.5 py-1 text-[10px] font-mono uppercase tracking-widest transition-all ${
+                lang === "de"
+                  ? "bg-zinc-800 text-white"
+                  : "text-zinc-600 hover:text-zinc-400"
+              }`}
+            >
+              <span className="text-xs leading-none">🇩🇪</span>
+              <span className="hidden sm:inline">DE</span>
+            </button>
+          </div>
+
+          <div className="h-4 w-[1px] bg-zinc-800" />
+
           <div className="hidden md:flex items-center gap-4">
             <div className="flex flex-col items-end">
               <span className="text-[8px] font-mono text-zinc-700 uppercase tracking-widest">NYC</span>
@@ -71,7 +117,7 @@ export default function Navbar() {
             </div>
             <div className="h-4 w-[1px] bg-zinc-800" />
           </div>
-          <span className="text-[10px] font-mono text-zinc-600 uppercase">v1.0.4</span>
+          <span className="text-[10px] font-mono text-zinc-600 uppercase">{t.nav.version}</span>
         </div>
       </div>
     </nav>

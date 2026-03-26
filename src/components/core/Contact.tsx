@@ -1,8 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useLang } from "@/lib/LanguageContext";
 
 export default function Contact() {
+  const { t } = useLang();
+  const c = t.contact;
+
   return (
     <section id="contact" className="bg-[#050505] py-32 px-6 border-t border-zinc-900/50">
       <div className="max-w-4xl mx-auto">
@@ -15,7 +19,7 @@ export default function Contact() {
           {/* Section label */}
           <div className="mb-12">
             <h2 className="text-[10px] font-mono uppercase tracking-[0.5em] text-cyan-500 mb-2">
-              Contact // Hire Me
+              {c.sectionLabel}
             </h2>
             <div className="h-[1px] w-24 bg-cyan-500/50" />
           </div>
@@ -24,18 +28,14 @@ export default function Contact() {
             {/* Left — positioning statement */}
             <div>
               <h3 className="text-2xl md:text-3xl font-bold text-white tracking-tight leading-tight mb-6">
-                Actively targeting{" "}
+                {c.headline1}{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">
-                  AI Security
+                  {c.headline2}
                 </span>{" "}
-                roles.
+                {c.headline3}
               </h3>
-              <p className="text-zinc-400 text-sm leading-relaxed mb-4">
-                AI Security Engineer&nbsp;&nbsp;·&nbsp;&nbsp;AGI Security Architect&nbsp;&nbsp;·&nbsp;&nbsp;AI-Adjacent Cybersecurity
-              </p>
-              <p className="text-zinc-600 text-xs leading-relaxed">
-                Available immediately. Based in Miami / Fort Lauderdale. Open to remote and hybrid.
-              </p>
+              <p className="text-zinc-400 text-sm font-mono mb-4">{c.roles}</p>
+              <p className="text-zinc-600 text-xs leading-relaxed">{c.availability}</p>
 
               {/* Status indicator */}
               <div className="flex items-center gap-2 mt-8">
@@ -44,7 +44,7 @@ export default function Contact() {
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
                 </span>
                 <span className="text-[10px] font-mono text-green-500/80 uppercase tracking-[0.3em]">
-                  Open to Opportunities
+                  {c.openBadge}
                 </span>
               </div>
             </div>
@@ -65,8 +65,8 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-xs font-mono text-zinc-300 group-hover:text-white transition-colors uppercase tracking-widest">LinkedIn</p>
-                    <p className="text-[10px] font-mono text-zinc-600">g-daniel-schillinger</p>
+                    <p className="text-xs font-mono text-zinc-300 group-hover:text-white transition-colors uppercase tracking-widest">{c.linkedin}</p>
+                    <p className="text-[10px] font-mono text-zinc-600">{c.linkedinSub}</p>
                   </div>
                 </div>
                 <svg viewBox="0 0 24 24" fill="none" className="w-4 h-4 text-zinc-700 group-hover:text-cyan-500 transition-colors">
@@ -86,8 +86,8 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-xs font-mono text-zinc-300 group-hover:text-white transition-colors uppercase tracking-widest">Email</p>
-                    <p className="text-[10px] font-mono text-zinc-600">gdaniel.schillinger@gmail.com</p>
+                    <p className="text-xs font-mono text-zinc-300 group-hover:text-white transition-colors uppercase tracking-widest">{c.email}</p>
+                    <p className="text-[10px] font-mono text-zinc-600">{c.emailSub}</p>
                   </div>
                 </div>
                 <svg viewBox="0 0 24 24" fill="none" className="w-4 h-4 text-zinc-700 group-hover:text-cyan-500 transition-colors">
@@ -108,8 +108,8 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-xs font-mono text-cyan-400 group-hover:text-cyan-300 transition-colors uppercase tracking-widest">Download Resume</p>
-                    <p className="text-[10px] font-mono text-zinc-600">GDanielSchillinger_Resume.pdf · One click</p>
+                    <p className="text-xs font-mono text-cyan-400 group-hover:text-cyan-300 transition-colors uppercase tracking-widest">{c.resume}</p>
+                    <p className="text-[10px] font-mono text-zinc-600">{c.resumeSub}</p>
                   </div>
                 </div>
                 <svg viewBox="0 0 24 24" fill="none" className="w-4 h-4 text-cyan-700 group-hover:text-cyan-400 transition-colors">
@@ -131,8 +131,8 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-xs font-mono text-zinc-300 group-hover:text-white transition-colors uppercase tracking-widest">GitHub</p>
-                    <p className="text-[10px] font-mono text-zinc-600">gdanielschillinger</p>
+                    <p className="text-xs font-mono text-zinc-300 group-hover:text-white transition-colors uppercase tracking-widest">{c.github}</p>
+                    <p className="text-[10px] font-mono text-zinc-600">{c.githubSub}</p>
                   </div>
                 </div>
                 <svg viewBox="0 0 24 24" fill="none" className="w-4 h-4 text-zinc-700 group-hover:text-cyan-500 transition-colors">

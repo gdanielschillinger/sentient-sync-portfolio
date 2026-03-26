@@ -2,80 +2,24 @@
 
 import ModuleCard from './ModuleCard';
 import TerminalLog from '../components/Terminal';
+import { useLang } from '@/lib/LanguageContext';
 
-const MODULE_DATA = [
-  {
-    id: "01",
-    type: "core",
-    title: "Sentient Sync Core",
-    description: "Autonomous AGI architecture for deterministic orchestration.",
-    logs: [
-      "SYNCHRONIZING_NODES...",
-      "REASONING_ENGINE: ACTIVE",
-      "EXECUTING_AGI_LOOP...",
-      "STATE_RESTORED_FROM_GRAPH",
-      "ORCHESTRATION_SYNC: 100%"
-    ]
-  },
-  {
-    id: "02",
-    type: "auditor",
-    title: "Security Auditor",
-    description: "Collusion detection & cryptographic signing via auditor.py.",
-    logs: [
-      "SCANNING_LOG_PULSE...",
-      "COLLUSION_CHECK: PASS",
-      "HMAC_SIGNATURE: 0x8a2...f",
-      "ALERT: SEMANTIC_OVERLAP",
-      "SIGNING_INTERACTION_HASH"
-    ]
-  },
-  {
-    id: "03",
-    type: "crypto",
-    title: "CryptoGuard AI",
-    description: "Forensic monitoring for smart contract integrity.",
-    logs: [
-      "LEDGER_SCAN: NOMINAL",
-      "VERIFYING_MERKLE_PROOF...",
-      "ANOMALY_DETECTION: OFF",
-      "BLOCK_HEIGHT: 24,019,202",
-      "INTEGRITY_SHIELD: ACTIVE"
-    ]
-  },
-  {
-    id: "04",
-    type: "nist",
-    title: "NIST Compliance",
-    description: "Zero-trust logic gates and incident response alignment.",
-    logs: [
-      "ENFORCING_NIST_800-53...",
-      "CONTROL_AC-2: VERIFIED",
-      "ZERO_TRUST_GATE: LOCKED",
-      "AUTH_TOKEN_ENCRYPTION",
-      "COMPLIANCE_LEVEL: HIGH"
-    ]
-  },
-  {
-    id: "05",
-    type: "persistence",
-    title: "Audit Persistence",
-    description: "SQLite-backed storage for AGI transparency.",
-    logs: [
-      "WRITING_TO_SQLITE...",
-      "DB_ENCRYPTION: AES-256",
-      "ARCHIVING_TRACE_DATA",
-      "SQL_INTEGRITY_CHECK...",
-      "V_LOG_STORED_SUCCESSFULLY"
-    ]
-  }
+// Terminal logs stay in machine-language (intentional) — not translated
+const MODULE_LOGS = [
+  ["SYNCHRONIZING_NODES...", "REASONING_ENGINE: ACTIVE",  "EXECUTING_AGI_LOOP...",   "STATE_RESTORED_FROM_GRAPH",  "ORCHESTRATION_SYNC: 100%"],
+  ["SCANNING_LOG_PULSE...",  "COLLUSION_CHECK: PASS",     "HMAC_SIGNATURE: 0x8a2...f","ALERT: SEMANTIC_OVERLAP",    "SIGNING_INTERACTION_HASH"],
+  ["LEDGER_SCAN: NOMINAL",   "VERIFYING_MERKLE_PROOF...","ANOMALY_DETECTION: OFF",   "BLOCK_HEIGHT: 24,019,202",   "INTEGRITY_SHIELD: ACTIVE"],
+  ["ENFORCING_NIST_800-53...","CONTROL_AC-2: VERIFIED",  "ZERO_TRUST_GATE: LOCKED",  "AUTH_TOKEN_ENCRYPTION",      "COMPLIANCE_LEVEL: HIGH"],
+  ["WRITING_TO_SQLITE...",    "DB_ENCRYPTION: AES-256",   "ARCHIVING_TRACE_DATA",     "SQL_INTEGRITY_CHECK...",      "V_LOG_STORED_SUCCESSFULLY"],
 ];
 
 export default function BentoGrid() {
+  const { t } = useLang();
+  const modules = t.modules.items;
   return (
     <section id="modules" className="bg-black py-32 px-6">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-[10px] uppercase tracking-[0.4em] text-zinc-500 mb-12">Core Modules // v1.0</h2>
+        <h2 className="text-[10px] uppercase tracking-[0.4em] text-zinc-500 mb-12">{t.modules.sectionLabel}</h2>
 
         {/*
           Layout: true 3x2 Bento
@@ -92,13 +36,13 @@ export default function BentoGrid() {
           }}
         >
           {/* Row 1 — modules 01–03 */}
-          {MODULE_DATA.slice(0, 3).map((module) => (
+          {modules.slice(0, 3).map((module, idx) => (
             <div key={module.id} style={{ gridColumn: 'span 1', gridRow: 'span 1' }}>
               <ModuleCard
                 id={module.id}
                 title={module.title}
                 description={module.description}
-                logs={module.logs}
+                logs={MODULE_LOGS[idx]}
               />
             </div>
           ))}
@@ -106,20 +50,20 @@ export default function BentoGrid() {
           {/* Row 2 col 1 — module 04 */}
           <div style={{ gridColumn: 'span 1', gridRow: 'span 1' }}>
             <ModuleCard
-              id={MODULE_DATA[3].id}
-              title={MODULE_DATA[3].title}
-              description={MODULE_DATA[3].description}
-              logs={MODULE_DATA[3].logs}
+              id={modules[3].id}
+              title={modules[3].title}
+              description={modules[3].description}
+              logs={MODULE_LOGS[3]}
             />
           </div>
 
           {/* Row 2 col 2 — module 05 */}
           <div style={{ gridColumn: 'span 1', gridRow: 'span 1' }}>
             <ModuleCard
-              id={MODULE_DATA[4].id}
-              title={MODULE_DATA[4].title}
-              description={MODULE_DATA[4].description}
-              logs={MODULE_DATA[4].logs}
+              id={modules[4].id}
+              title={modules[4].title}
+              description={modules[4].description}
+              logs={MODULE_LOGS[4]}
             />
           </div>
 

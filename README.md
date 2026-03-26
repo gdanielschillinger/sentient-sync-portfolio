@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# G. Daniel Schillinger — AGI Cybersecurity Architect
 
-## Getting Started
+**Portfolio:** [gdanielschillinger.com](https://gdanielschillinger.com) · **Live Site:** [sentient-sync-portfolio.vercel.app](https://sentient-sync-portfolio.vercel.app)
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Sentient Sync Engine — AGI Collusion Detection Architecture
+
+A production-grade AGI security framework engineered to detect and neutralize multi-agent collusion in real time. Built in Python with LangGraph, the system monitors inter-agent communication channels for coordinated adversarial behavior — including covert prompt injection chains, shared goal misalignment, and synchronized policy evasion across autonomous agent networks.
+
+### OWASP LLM Top 10 Coverage
+
+| Vector | Threat |
+|---|---|
+| LLM01 | Prompt Injection |
+| LLM02 | Insecure Output Handling |
+| LLM04 | Model Denial of Service |
+| LLM06 | Sensitive Information Disclosure |
+| LLM08 | Excessive Agency |
+| LLM09 | Overreliance |
+
+### Frameworks & Standards
+
+- **NIST CSF** — Identify / Protect / Detect / Respond / Recover
+- **OWASP LLM Top 10** — Full coverage of AI-specific attack vectors
+- **IEEE** — Architectural integrity and audit protocol standards
+
+### Core Architecture
+
+- `auditor.py` — Zero-Defect detection logic with continuous retesting cycles
+- **LangGraph** — Multi-agent orchestration and state machine control
+- **Python** — PEP 8 compliant, Zero-Defect protocol enforced
+- **Next.js + Tailwind CSS** — Portfolio front-end (TypeScript)
+- **Framer Motion** — Industrial High-Tech UI animations
+
+---
+
+## Stack
+
+```
+Python · LangGraph · Next.js · TypeScript · Tailwind CSS · Framer Motion · Vercel
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Academic Context
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**BS Cybersecurity — Champlain College · 4.0 GPA**
+Critical Path Phase: March 9 – April 22, 2026
+Active modules: CMIT-235 (Advanced Python) · MGMT-260 (Project Management)
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## eMerge Americas — April 23, 2026
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The Sentient Sync Engine will be featured at [eMerge Americas](https://emergeamericas.com) in Miami on April 23, 2026 — one of the largest tech and innovation conferences in the Western Hemisphere.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Target Roles
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+AI Security Engineer · AGI Security Architect · AI-Adjacent Cybersecurity
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+*Architected at the intersection of Artificial General Intelligence and enterprise cybersecurity.*

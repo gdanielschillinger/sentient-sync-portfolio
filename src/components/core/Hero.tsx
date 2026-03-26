@@ -26,6 +26,17 @@ export default function Hero() {
           <span className="text-xs font-mono tracking-widest text-cyan-400 uppercase">Protocol: AGI-Sync-Secure</span>
         </div>
 
+        {/* Name + credentials lockup */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.05 }}
+          className="mb-5"
+        >
+          <p className="text-sm md:text-base font-mono font-bold text-white tracking-widest uppercase">G. Daniel Schillinger</p>
+          <p className="text-[10px] font-mono text-zinc-500 uppercase tracking-[0.3em] mt-1">AGI Cybersecurity Architect&nbsp;&nbsp;//&nbsp;&nbsp;BS Cybersecurity, Champlain College (4.0 GPA)&nbsp;&nbsp;//&nbsp;&nbsp;Visa Inc. GenAI Ambassador+</p>
+        </motion.div>
+
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -102,8 +113,9 @@ export default function Hero() {
           <h2 className="text-[10px] font-mono uppercase tracking-[0.4em] text-zinc-500 mb-8">G. Daniel Schillinger // AGI Cybersecurity Architect</h2>
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
             <div className="md:col-span-8">
-              <p className="text-zinc-300 text-lg leading-relaxed mb-6">Cybersecurity-focused systems builder with enterprise-scale experience and a disciplined approach to AI architecture.</p>
-              <p className="text-zinc-500 text-sm leading-relaxed mb-8">G. Daniel Schillinger designs secure automation frameworks prioritizing traceability and deterministic execution. His work bridges security engineering with forward-looking AGI orchestration — 4 years at Visa Inc., BS Cybersecurity (4.0 GPA, Champlain College), and the architect behind the Sentient Sync Engine.</p>
+              <p className="text-zinc-300 text-lg leading-relaxed mb-4">I built Visa&apos;s first in-house LLM from scratch — trained on production-grade, compliance-controlled sensitive data, deployed at enterprise scale. Case summarization accuracy went from 37% to over 90% in under 30 days. That system delivered OFAC compliance automations across one of the world&apos;s largest payment networks.</p>
+              <p className="text-zinc-500 text-sm leading-relaxed mb-4">Over 3.5 years at Visa Inc., I was hand-selected as GenAI Ambassador+ and recognized with the 2024 Client Care Excellence Award. As a certified SME, I led full-cycle re-training, bias audits, and enterprise-wide rollout — not just the architecture, but the humans adopting it.</p>
+              <p className="text-zinc-500 text-sm leading-relaxed mb-8">Now completing a BS Cybersecurity at Champlain College (4.0 GPA) and architecting the Sentient Sync Engine — a production-grade AGI collusion detection framework aligned to OWASP LLM Top 10, NIST CSF, and IEEE standards. Featured at eMerge Americas, April 23, 2026.</p>
             </div>
             <div className="md:col-span-4 flex flex-col gap-4">
               <h3 className="text-[10px] font-mono uppercase tracking-widest text-cyan-500/80">Core Focus</h3>

@@ -206,7 +206,7 @@ const CWE_TO_OWASP: Record<string, string> = {
   'CWE-784': 'A08:2021 - Data Integrity Failures',
   'CWE-829': 'A08:2021 - Data Integrity Failures',
   'CWE-830': 'A08:2021 - Data Integrity Failures',
-  'CWE-913': 'A08:2021 - Data Integrity Failures',
+  'CWE-830b': 'A08:2021 - Data Integrity Failures',
 
   // A09 - Security Logging and Monitoring Failures
   'CWE-117': 'A09:2021 - Logging Failures',

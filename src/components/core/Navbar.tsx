@@ -43,15 +43,21 @@ export default function Navbar() {
         </a>
 
         <div className="flex items-center gap-8">
-          {["Architecture", "Modules", "Threats", "Docs", "Roadmap"].map((item) => (
+          {["Architecture", "Modules", "Threats", "Docs", "Demo", "Roadmap"].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="text-[10px] font-mono uppercase tracking-widest text-zinc-500 hover:text-cyan-400 transition-colors"
+              className="text-[10px] font-mono uppercase tracking-widest text-zinc-500 hover:text-cyan-400 transition-colors hidden lg:block"
             >
               {item}
             </a>
           ))}
+          <a
+            href="#contact"
+            className="text-[10px] font-mono uppercase tracking-widest text-cyan-400 border border-cyan-500/30 px-3 py-1 rounded-sm hover:bg-cyan-500/10 hover:border-cyan-500/60 transition-all"
+          >
+            Hire Me
+          </a>
           <div className="h-4 w-[1px] bg-zinc-800" />
           <div className="hidden md:flex items-center gap-4">
             <div className="flex flex-col items-end">

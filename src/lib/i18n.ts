@@ -44,7 +44,7 @@ export const translations = {
     // ── ARCHITECTURE ────────────────────────────────────────────────────
     arch: {
       sectionLabel: "System Architecture // Flow-v1",
-      activeDev:    "Active Development",
+      activeDev:    "V2 Scope // Q3 2026",
       layers: [
         { id: "LOG-01",  title: "Secure Ingestion Layer",   desc: "Deterministic log parsing and regex-based anomaly detection engine." },
         { id: "CORE-02", title: "Agent Orchestration",      desc: "LangGraph logic gates utilizing collusion detection for secure task delegation." },
@@ -58,7 +58,7 @@ export const translations = {
       sectionLabel: "Core Modules // v1.0",
       items: [
         { id: "01", title: "Sentient Sync Core",  description: "Autonomous AGI architecture for deterministic orchestration." },
-        { id: "02", title: "Security Auditor",    description: "Collusion detection & cryptographic signing via auditor.py." },
+        { id: "02", title: "Security Auditor",    description: "v1 Active — single-model collusion detection, HMAC-SHA256 signed. v2 (Q3 2026) — multi-model LLM pipeline expansion." },
         { id: "03", title: "CryptoGuard AI",      description: "Forensic monitoring for smart contract integrity." },
         { id: "04", title: "NIST Compliance",     description: "Zero-trust logic gates and incident response alignment." },
         { id: "05", title: "Audit Persistence",   description: "SQLite-backed storage for AGI transparency." },
@@ -164,7 +164,7 @@ export const translations = {
     // ── ARCHITECTURE ────────────────────────────────────────────────────
     arch: {
       sectionLabel: "Systemarchitektur // Flow-v1",
-      activeDev:    "In Entwicklung",
+      activeDev:    "V2-Scope // Q3 2026",
       layers: [
         { id: "LOG-01",  title: "Sichere Eingabeschicht",       desc: "Deterministisches Log-Parsing und Regex-basierte Anomalieerkennung." },
         { id: "CORE-02", title: "Agentenorchestrierung",         desc: "LangGraph-Logikgatter mit Kollisionserkennung für sichere Aufgabenverteilung." },
@@ -178,7 +178,7 @@ export const translations = {
       sectionLabel: "Kernmodule // v1.0",
       items: [
         { id: "01", title: "Sentient Sync Core",   description: "Autonome AGI-Architektur für deterministische Orchestrierung." },
-        { id: "02", title: "Sicherheits-Auditor",  description: "Kollisionserkennung & kryptografische Signierung via auditor.py." },
+        { id: "02", title: "Sicherheits-Auditor",  description: "v1 Aktiv — Einzel-Modell-Kollisionserkennung, HMAC-SHA256-signiert. v2 (Q3 2026) — Erweiterung auf Multi-Modell-LLM-Pipelines." },
         { id: "03", title: "CryptoGuard AI",        description: "Forensische Überwachung der Smart-Contract-Integrität." },
         { id: "04", title: "NIST-Konformität",      description: "Zero-Trust-Logikgatter und Ausrichtung an der Incident-Response." },
         { id: "05", title: "Audit-Persistenz",      description: "SQLite-gestützte Speicherung für AGI-Transparenz." },

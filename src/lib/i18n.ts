@@ -50,6 +50,7 @@ export const translations = {
         { id: "CORE-02", title: "Agent Orchestration",      desc: "LangGraph logic gates utilizing collusion detection for secure task delegation." },
         { id: "AUDIT-03",title: "Cryptographic Signing",    desc: "Implementation of auditor.py for immutable action-trail validation." },
         { id: "GOV-04",  title: "NIST-Aligned Governance",  desc: "Persistence layer ensuring traceability and zero-trust protocol enforcement." },
+        { id: "LLM-05",  title: "Gemini Threat Analysis",   desc: "Gemini 2.5 Pro structured threat reasoning over flagged log events. Output HMAC-SHA256 signed before state commit — tamper-evident LLM inference." },
       ],
     },
 
@@ -58,7 +59,7 @@ export const translations = {
       sectionLabel: "Core Modules // v1.0",
       items: [
         { id: "01", title: "Sentient Sync Core",  description: "Autonomous AGI architecture for deterministic orchestration." },
-        { id: "02", title: "Security Auditor",    description: "v1 Active — single-model collusion detection, HMAC-SHA256 signed. v2 (Q3 2026) — multi-model LLM pipeline expansion." },
+        { id: "02", title: "Security Auditor",    description: "v1.1 Active — Gemini 2.5 Pro structured threat analysis with HMAC-SHA256 signed output. Subnet-level collusion detection with confidence scoring (0–100)." },
         { id: "03", title: "CryptoGuard AI",      description: "Forensic monitoring for smart contract integrity." },
         { id: "04", title: "NIST Compliance",     description: "Zero-trust logic gates and incident response alignment." },
         { id: "05", title: "Audit Persistence",   description: "SQLite-backed storage for AGI transparency." },
@@ -84,7 +85,7 @@ export const translations = {
         { date: "MAR 2026", task: "Academic Finalization",             detail: "BS Cybersecurity, Champlain College (Oct 2023 – Present) — 4.0 GPA. CMIT-235 Advanced Python and MGMT-260 Project Management — active through April 22, 2026." },
         { date: "APR 2026", task: "eMerge Americas Launch",            detail: "Live portfolio deployment featured at eMerge Americas, Miami — April 23, 2026." },
         { date: "Q2 2026",  task: "AI Security Engineer Role",         detail: "Targeting AI Security Engineer, AGI Security Architect, and AI-adjacent Cybersecurity roles at enterprise and high-growth AI firms." },
-        { date: "Q3 2026",  task: "Collusion Detection v2",            detail: "Expand agent collusion detection to multi-model LLM pipelines. Integrate LLM04 (Model DoS) and LLM08 (Excessive Agency) mitigations into auditor.py." },
+        { date: "Q3 2026",  task: "Collusion Detection v2",            detail: "Expand multi-model LLM pipeline analysis beyond Gemini. Integrate LLM04 (Model DoS) and LLM08 (Excessive Agency) mitigations. Cross-model collusion scoring." },
         { date: "Q4 2026",  task: "Open-Source Release",               detail: "Public release of the Sentient Sync Engine framework under an open-source license. Documentation, contribution guidelines, and security disclosure policy." },
         { date: "2027",     task: "AGI Security Research",             detail: "Publish peer-reviewed research on multi-agent collusion vectors and real-time detection architectures. Target IEEE S&P and USENIX Security." },
       ],
@@ -170,6 +171,7 @@ export const translations = {
         { id: "CORE-02", title: "Agentenorchestrierung",         desc: "LangGraph-Logikgatter mit Kollisionserkennung für sichere Aufgabenverteilung." },
         { id: "AUDIT-03",title: "Kryptografische Signierung",   desc: "Implementierung von auditor.py für unveränderliche Aktions-Trail-Validierung." },
         { id: "GOV-04",  title: "NIST-konforme Governance",     desc: "Persistenzschicht zur Nachvollziehbarkeit und Zero-Trust-Protokollerzwingung." },
+        { id: "LLM-05", title: "Gemini-Bedrohungsanalyse",       desc: "Gemini 2.5 Pro strukturiertes Bedrohungs-Reasoning über markierte Log-Ereignisse. Ausgabe HMAC-SHA256-signiert vor State-Commit — manipulationssicheres LLM-Inferencing." },
       ],
     },
 
@@ -178,7 +180,7 @@ export const translations = {
       sectionLabel: "Kernmodule // v1.0",
       items: [
         { id: "01", title: "Sentient Sync Core",   description: "Autonome AGI-Architektur für deterministische Orchestrierung." },
-        { id: "02", title: "Sicherheits-Auditor",  description: "v1 Aktiv — Einzel-Modell-Kollisionserkennung, HMAC-SHA256-signiert. v2 (Q3 2026) — Erweiterung auf Multi-Modell-LLM-Pipelines." },
+        { id: "02", title: "Sicherheits-Auditor",  description: "v1.1 Aktiv — Gemini 2.5 Pro strukturierte Bedrohungsanalyse mit HMAC-SHA256-signierter Ausgabe. Subnetz-Kollisionserkennung mit Konfidenz-Scoring (0–100)." },
         { id: "03", title: "CryptoGuard AI",        description: "Forensische Überwachung der Smart-Contract-Integrität." },
         { id: "04", title: "NIST-Konformität",      description: "Zero-Trust-Logikgatter und Ausrichtung an der Incident-Response." },
         { id: "05", title: "Audit-Persistenz",      description: "SQLite-gestützte Speicherung für AGI-Transparenz." },
@@ -204,7 +206,7 @@ export const translations = {
         { date: "Mär. 2026", task: "Akademischer Abschluss",                  detail: "B.Sc. Cybersicherheit, Champlain College (Okt. 2023 – aktuell) — 4,0 GPA. CMIT-235 Advanced Python und MGMT-260 Projektmanagement — aktiv bis 22. April 2026." },
         { date: "Apr. 2026", task: "eMerge Americas Launch",                   detail: "Live-Portfolio-Präsentation auf der eMerge Americas, Miami — 23. April 2026." },
         { date: "Q2 2026",   task: "KI-Sicherheitsstelle",                     detail: "Zielanstellungen: AI Security Engineer, AGI Security Architect und KI-nahe Cybersicherheitspositionen bei Unternehmen und wachstumsstarken KI-Firmen." },
-        { date: "Q3 2026",   task: "Kollisionserkennung v2",                   detail: "Erweiterung der Agenten-Kollisionserkennung auf Multi-Modell-LLM-Pipelines. Integration von LLM04 (Model DoS) und LLM08 (Excessive Agency) in auditor.py." },
+        { date: "Q3 2026",   task: "Kollisionserkennung v2",                   detail: "Gemini 2.5 Pro LLM-Bedrohungsanalyse-Schicht ausgeliefert (v1.1). Erweiterung auf Multi-Modell-LLM-Pipelines. Integration von LLM04 (Model DoS) und LLM08 (Excessive Agency) in auditor.py." },
         { date: "Q4 2026",   task: "Open-Source-Veröffentlichung",             detail: "Öffentliche Veröffentlichung des Sentient Sync Engine Frameworks unter einer Open-Source-Lizenz. Dokumentation, Beitragsrichtlinien und Sicherheitsrichtlinie." },
         { date: "2027",      task: "AGI-Sicherheitsforschung",                 detail: "Veröffentlichung peer-reviewter Forschung zu Multi-Agenten-Kollisionsvektoren und Echtzeit-Erkennungsarchitekturen. Zielkonferenzen: IEEE S&P und USENIX Security." },
       ],

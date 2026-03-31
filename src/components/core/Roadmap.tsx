@@ -24,19 +24,19 @@ export default function Roadmap() {
               className="relative p-6 border-l border-zinc-800"
             >
               <div className={`absolute top-0 -left-[5px] w-2 h-2 rounded-full ${
-                idx < 2
+                idx < 1
                   ? 'bg-green-500 shadow-[0_0_8px_#22c55e]'
-                  : idx === 2
+                  : idx === 1 || idx === 2
                   ? 'bg-cyan-400 shadow-[0_0_12px_#22d3ee] animate-pulse'
                   : 'bg-zinc-700'
               }`} />
               <span className="block font-mono text-[10px] text-cyan-500/70 mb-4">{phase.date}</span>
-              {idx < 2 && (
+              {idx < 1 && (
                 <span className="inline-block font-mono text-[9px] text-green-500/70 uppercase tracking-widest mb-2">
                   {t.roadmap.complete}
                 </span>
               )}
-              {idx === 2 && (
+              {(idx === 1 || idx === 2) && (
                 <span className="inline-block font-mono text-[9px] text-cyan-400/80 uppercase tracking-widest mb-2">
                   {t.roadmap.active}
                 </span>

@@ -45,7 +45,7 @@ Python · LangGraph · Next.js · TypeScript · Tailwind CSS · Framer Motion ·
 
 ## Academic Context
 
-**BS Cybersecurity — Champlain College · 4.0 GPA**
+**BS Cybersecurity — Champlain College · Oct 2023 – Present · 4.0 GPA**
 Critical Path Phase: March 9 – April 22, 2026
 Active modules: CMIT-235 (Advanced Python) · MGMT-260 (Project Management)
 
